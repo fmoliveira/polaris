@@ -1,5 +1,6 @@
 import type {Exact} from './types';
 import type {Tokens, TokenGroup} from './tokens';
+import type {MetadataTokenGroup} from './metadata';
 
 const BASE_FONT_SIZE = 16;
 
@@ -76,7 +77,9 @@ function rem(value: string) {
   );
 }
 
-export function tokensToRems<T extends Exact<TokenGroup, T>>(tokenGroup: T) {
+export function tokensToRems<T extends Exact<MetadataTokenGroup, T>>(
+  tokenGroup: T,
+) {
   return Object.fromEntries(
     Object.entries(tokenGroup).map(([token, properties]) => [
       token,
@@ -97,7 +100,7 @@ export function createVar(token: string) {
  *
  * Result: ['p-keyframes-fade-in', 'p-keyframes-spin', etc...]
  */
-export function getKeyframeNames(motionTokenGroup: TokenGroup) {
+export function getKeyframeNames(motionTokenGroup: MetadataTokenGroup) {
   return Object.keys(motionTokenGroup)
     .map((token) => (token.startsWith('keyframes') ? `p-${token}` : null))
     .filter(Boolean);
@@ -114,4 +117,17 @@ export function getCustomPropertyNames(tokens: Tokens) {
       Object.keys(tokenGroup).map((token) => createVar(token)),
     )
     .flat();
+}
+
+export function removeMetadata<T extends Exact<MetadataTokenGroup, T>>(
+  tokenGroup: T,
+) {
+  return Object.fromEntries(
+    Object.entries(tokenGroup).map(([token, values]) => [token, values.value]),
+    // We loose the `tokenGroup` inference after transforming the object with
+    // `Object.fromEntries()` and `Object.entries()`. Thus, we cast the result
+    // to the transformed `T` since we are simply replacing the object data with `value`.
+  ) as {
+    [Key in keyof T]: string;
+  };
 }

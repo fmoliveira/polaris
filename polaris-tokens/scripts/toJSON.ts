@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import {Tokens, TokenProperties} from '../src';
+import {Tokens, TokenGroup} from '../src';
 
 const outputDir = path.join(__dirname, '../dist/json');
 
@@ -15,23 +15,9 @@ export async function toJSON(tokens: Tokens) {
   }
 
   for (const entry of Object.entries(tokens)) {
-    const [tokenGroup, tokenProps] = entry as [string, TokenProperties];
+    const [tokenGroupName, tokenGroup] = entry as [keyof Tokens, TokenGroup];
+    const fileName = getFileName(`${tokenGroupName}.json`);
 
-    if (tokenGroup === 'colorSchemes') {
-      for (const colorEntry of Object.entries(tokenProps)) {
-        const [colorTokenGroup, colorTokenProps] = colorEntry as [
-          string,
-          TokenProperties,
-        ];
-
-        const fileName = getFileName(`colors.${colorTokenGroup}.json`);
-
-        await fs.promises.writeFile(fileName, JSON.stringify(colorTokenProps));
-      }
-    } else {
-      const fileName = getFileName(`${tokenGroup}.json`);
-
-      await fs.promises.writeFile(fileName, JSON.stringify(tokenProps));
-    }
+    await fs.promises.writeFile(fileName, JSON.stringify(tokenGroup));
   }
 }
