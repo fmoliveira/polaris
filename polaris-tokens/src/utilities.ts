@@ -1,6 +1,10 @@
-import type {Exact} from './types';
-import type {Tokens, TokenGroup} from './tokens';
-import type {MetadataTokenGroup} from './metadata';
+import type {
+  Exact,
+  Tokens,
+  TokenGroup,
+  MetaTokenGroup,
+  TokenProperties,
+} from './types';
 
 const BASE_FONT_SIZE = 16;
 
@@ -77,14 +81,21 @@ function rem(value: string) {
   );
 }
 
-export function tokensToRems<T extends Exact<MetadataTokenGroup, T>>(
+export function tokensToRems<T extends Exact<TokenGroup | MetaTokenGroup, T>>(
   tokenGroup: T,
 ) {
   return Object.fromEntries(
-    Object.entries(tokenGroup).map(([token, properties]) => [
-      token,
-      {...properties, value: rem(properties.value)},
-    ]),
+    Object.entries(tokenGroup).map(([token, property]) => {
+      let value;
+
+      if (isTokenProperties(property)) {
+        value = rem(property.value);
+      } else {
+        value = rem(property);
+      }
+
+      return [token, value];
+    }),
     // We loose the `tokenGroup` inference after transforming the object with
     // `Object.fromEntries()` and `Object.entries()`. Thus, we cast the result
     // back to `T` since we are simply converting the `value` from px to rem.
@@ -100,7 +111,7 @@ export function createVar(token: string) {
  *
  * Result: ['p-keyframes-fade-in', 'p-keyframes-spin', etc...]
  */
-export function getKeyframeNames(motionTokenGroup: MetadataTokenGroup) {
+export function getKeyframeNames(motionTokenGroup: TokenGroup) {
   return Object.keys(motionTokenGroup)
     .map((token) => (token.startsWith('keyframes') ? `p-${token}` : null))
     .filter(Boolean);
@@ -119,15 +130,8 @@ export function getCustomPropertyNames(tokens: Tokens) {
     .flat();
 }
 
-export function removeMetadata<T extends Exact<MetadataTokenGroup, T>>(
-  tokenGroup: T,
-) {
-  return Object.fromEntries(
-    Object.entries(tokenGroup).map(([token, values]) => [token, values.value]),
-    // We loose the `tokenGroup` inference after transforming the object with
-    // `Object.fromEntries()` and `Object.entries()`. Thus, we cast the result
-    // to the transformed `T` since we are simply replacing the object data with `value`.
-  ) as {
-    [Key in keyof T]: string;
-  };
+function isTokenProperties(
+  property: TokenProperties | string,
+): property is TokenProperties {
+  return (property as TokenProperties).value !== undefined;
 }
