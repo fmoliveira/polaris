@@ -2,4 +2,4 @@
 'polaris.shopify.com': patch
 ---
 
-Improve guidelines page layout
+added contributing page to styleguide
