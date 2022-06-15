@@ -25,6 +25,11 @@
   max-width: var(--nav-width);
   align-self: flex-start;
 
+  //  hacky
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+
   @media screen and (max-width: $breakpointDesktop) {
     display: none;
   }
