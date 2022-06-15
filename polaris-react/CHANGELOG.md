@@ -1,5 +1,11 @@
 # Changelog
 
+## 9.17.0
+
+### Minor Changes
+
+- [#6143](https://github.com/Shopify/polaris/pull/6143) [`20dc2ab05`](https://github.com/Shopify/polaris/commit/20dc2ab053638f73fb6f82028381c97960bcff16) Thanks [@chloerice](https://github.com/chloerice)! - Added support for the `event` argument to the `TextField` `onBlur` prop
+
 ## 9.16.0
 
 ### Minor Changes
@@ -10,17 +16,17 @@
 
 ### Patch Changes
 
-* [#5987](https://github.com/Shopify/polaris/pull/5987) [`d1acf9d25`](https://github.com/Shopify/polaris/commit/d1acf9d25b5f143d666e326f8435690a51e67c8b) Thanks [@bencmilton](https://github.com/bencmilton)! - Fixed click events not propagating in `Tooltip` and added support for SVG elements as `prefix`, `suffix`, and `verticalContent` in `TextField`
+- [#5987](https://github.com/Shopify/polaris/pull/5987) [`d1acf9d25`](https://github.com/Shopify/polaris/commit/d1acf9d25b5f143d666e326f8435690a51e67c8b) Thanks [@bencmilton](https://github.com/bencmilton)! - Fixed click events not propagating in `Tooltip` and added support for SVG elements as `prefix`, `suffix`, and `verticalContent` in `TextField`
 
-- [#6098](https://github.com/Shopify/polaris/pull/6098) [`fc39d5fca`](https://github.com/Shopify/polaris/commit/fc39d5fcab57f2a6bc1efec0ca85ce76227b10ae) Thanks [@alololox](https://github.com/alololox)! - [IndexTable] Hide scroll bar when table is not scrollable
+* [#6098](https://github.com/Shopify/polaris/pull/6098) [`fc39d5fca`](https://github.com/Shopify/polaris/commit/fc39d5fcab57f2a6bc1efec0ca85ce76227b10ae) Thanks [@alololox](https://github.com/alololox)! - [IndexTable] Hide scroll bar when table is not scrollable
 
-* [#5803](https://github.com/Shopify/polaris/pull/5803) [`a19fe4f9f`](https://github.com/Shopify/polaris/commit/a19fe4f9f2982ff74d5c34a597dea34ef6519b4a) Thanks [@aaronccasanova](https://github.com/aaronccasanova)! - Improved TypeScript declarations for `@shopify/polaris-tokens`
+- [#5803](https://github.com/Shopify/polaris/pull/5803) [`a19fe4f9f`](https://github.com/Shopify/polaris/commit/a19fe4f9f2982ff74d5c34a597dea34ef6519b4a) Thanks [@aaronccasanova](https://github.com/aaronccasanova)! - Improved TypeScript declarations for `@shopify/polaris-tokens`
 
-- [#6125](https://github.com/Shopify/polaris/pull/6125) [`0283a4e33`](https://github.com/Shopify/polaris/commit/0283a4e33877026dded3c6d609c12489db38bad6) Thanks [@aveline](https://github.com/aveline)! - Revert border color for checkbox and radio button
+* [#6125](https://github.com/Shopify/polaris/pull/6125) [`0283a4e33`](https://github.com/Shopify/polaris/commit/0283a4e33877026dded3c6d609c12489db38bad6) Thanks [@aveline](https://github.com/aveline)! - Revert border color for checkbox and radio button
 
-* [#6106](https://github.com/Shopify/polaris/pull/6106) [`92e285c9b`](https://github.com/Shopify/polaris/commit/92e285c9b164a1c747b5b56cd973a5e2e26b361b) Thanks [@lgriffee](https://github.com/lgriffee)! - Updated experimental breakpoints for down media conditions
+- [#6106](https://github.com/Shopify/polaris/pull/6106) [`92e285c9b`](https://github.com/Shopify/polaris/commit/92e285c9b164a1c747b5b56cd973a5e2e26b361b) Thanks [@lgriffee](https://github.com/lgriffee)! - Updated experimental breakpoints for down media conditions
 
-* Updated dependencies [[`8bf288c8f`](https://github.com/Shopify/polaris/commit/8bf288c8f866d56021f23d76a5e43de78cc295b4), [`738e31e13`](https://github.com/Shopify/polaris/commit/738e31e1320b289fbf68a2468bcb208b9a629edf), [`75f46e50e`](https://github.com/Shopify/polaris/commit/75f46e50e88e1b93ef0075b5474cc632acdfc81d), [`a19fe4f9f`](https://github.com/Shopify/polaris/commit/a19fe4f9f2982ff74d5c34a597dea34ef6519b4a), [`b7160b861`](https://github.com/Shopify/polaris/commit/b7160b86107f8466bb275122cf08aad0bed8bbd2)]:
+- Updated dependencies [[`8bf288c8f`](https://github.com/Shopify/polaris/commit/8bf288c8f866d56021f23d76a5e43de78cc295b4), [`738e31e13`](https://github.com/Shopify/polaris/commit/738e31e1320b289fbf68a2468bcb208b9a629edf), [`75f46e50e`](https://github.com/Shopify/polaris/commit/75f46e50e88e1b93ef0075b5474cc632acdfc81d), [`a19fe4f9f`](https://github.com/Shopify/polaris/commit/a19fe4f9f2982ff74d5c34a597dea34ef6519b4a), [`b7160b861`](https://github.com/Shopify/polaris/commit/b7160b86107f8466bb275122cf08aad0bed8bbd2)]:
   - @shopify/polaris-tokens@5.3.0
   - @shopify/polaris-icons@4.23.0
 

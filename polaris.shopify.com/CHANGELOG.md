@@ -1,5 +1,24 @@
 # polaris.shopify.com
 
+## 0.4.0
+
+### Minor Changes
+
+- [#6151](https://github.com/Shopify/polaris/pull/6151) [`aa93314f8`](https://github.com/Shopify/polaris/commit/aa93314f8c2b977db232a272cd2c2a1b77f8b530) Thanks [@martenbjork](https://github.com/martenbjork)! - Improved focus states and a11y behaviour
+
+* [#6150](https://github.com/Shopify/polaris/pull/6150) [`ea6184720`](https://github.com/Shopify/polaris/commit/ea6184720e7e5af75fcf34f405a712e960835313) Thanks [@martenbjork](https://github.com/martenbjork)! - Add icons to Foundations page
+
+### Patch Changes
+
+- [#6142](https://github.com/Shopify/polaris/pull/6142) [`d8d06976c`](https://github.com/Shopify/polaris/commit/d8d06976c974107f9b534e94729cdf53442db9eb) Thanks [@chazdean](https://github.com/chazdean)! - Fix download icon button
+
+* [#6019](https://github.com/Shopify/polaris/pull/6019) [`1198f53f0`](https://github.com/Shopify/polaris/commit/1198f53f0ffa4cd4d97bac9d17507b63089d179d) Thanks [@yurm04](https://github.com/yurm04)! - added contributing page to styleguide
+
+- [#6135](https://github.com/Shopify/polaris/pull/6135) [`d5f58d675`](https://github.com/Shopify/polaris/commit/d5f58d675f500eeba65bf18ae84e1c3666a9d20d) Thanks [@chazdean](https://github.com/chazdean)! - Fix "skip to content" bug
+
+- Updated dependencies [[`20dc2ab05`](https://github.com/Shopify/polaris/commit/20dc2ab053638f73fb6f82028381c97960bcff16)]:
+  - @shopify/polaris@9.17.0
+
 ## 0.3.0
 
 ### Minor Changes
