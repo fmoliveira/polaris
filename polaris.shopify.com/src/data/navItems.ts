@@ -1,8 +1,9 @@
-import { NavItem } from "../components/Nav/Nav";
+import type { NavItem } from "../components/NavItems";
 
 export const foundationsNavItems: NavItem[] = [
   {
     title: "Foundations",
+    url: "/foundations",
     children: [
       {
         title: "Experience values",
@@ -173,10 +174,9 @@ export const foundationsNavItems: NavItem[] = [
 
 export const contributingNavItems = [
   {
-    title: "Contributing to Polaris",
+    title: "Contributing",
     url: "/contributing",
     children: [
-
       {
         title: "Components",
         url: "/contributing/components",
@@ -198,7 +198,7 @@ export const contributingNavItems = [
   {
     title: "Guides",
     children: [
-       {
+      {
         title: "Thinking in systems",
         url: "/contributing/thinking-in-systems",
       },
@@ -206,7 +206,6 @@ export const contributingNavItems = [
         title: "When to evolve the system",
         url: "/contributing/when-to-evolve-the-system",
       },
-
     ],
-  }
+  },
 ];
