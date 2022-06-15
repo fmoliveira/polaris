@@ -4,7 +4,7 @@
 
 @mixin heading-1 {
   color: var(--text-strong);
-  font-size: var(--font-size-800);
+  font-size: var(--font-size-900);
   font-weight: var(--font-weight-700);
   letter-spacing: var(--letter-spacing-700);
   line-height: 1.2;
@@ -35,24 +35,25 @@
 
 @mixin text-lg {
   color: var(--text);
-  font-size: var(--font-size-500);
+  font-size: var(--font-size-600);
   font-weight: var(--font-weight-400);
+  line-height: 1.6;
 }
 
 @mixin text {
   color: var(--text);
-  font-size: var(--font-size-400);
+  font-size: var(--font-size-500);
   font-weight: var(--font-weight-400);
 }
 
 @mixin nav {
   color: var(--text);
-  font-size: var(--font-size-300);
+  font-size: var(--font-size-400);
   font-weight: var(--font-weight-00);
 }
 
 @mixin kicker {
   color: var(--text-strong);
-  font-size: var(--font-size-300);
+  font-size: var(--font-size-400);
   font-weight: var(--font-weight-600);
 }

@@ -56,6 +56,28 @@
     }
 
     &[aria-current="page"],
+    &:active {
+      color: var(--primary);
+      font-weight: 600;
+
+      &:hover {
+        color: var(--primary);
+        font-weight: 600;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 2px;
+          bottom: 2px;
+          left: -0.75rem;
+          width: 1.5px;
+          border-radius: var(--border-radius-200);
+          background: var(--primary);
+        }
+    }
+
     &:hover {
       color: var(--text-strong);
 

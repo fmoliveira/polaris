@@ -3,6 +3,9 @@
 @import "../../styles/variables.scss";
 
 .Longform {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+
   img {
     border-radius: var(--border-radius-200);
     width: 100%;
@@ -34,26 +37,28 @@
 
   h2 {
     @include heading-2;
-    margin-top: 3.25rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 
   h3 {
     @include heading-3;
-    margin-top: 1.5rem;
+    margin-top:3rem;
+    margin-bottom: .75rem;
   }
 
   h4 {
     @include heading-4;
   }
 
-  h3,
-  h4 {
-    + p,
-    + ul,
-    + ol {
-      margin-top: -0.5rem;
-    }
-  }
+  // h3,
+  // h4 {
+  //   + p,
+  //   + ul,
+  //   + ol {
+  //     margin-top: -0.5rem;
+  //   }
+  // }
 
   h1,
   h2,
@@ -92,7 +97,7 @@
   ul li {
     position: relative;
     &::marker {
-      color: #444;
+      color: var(--text);
 
       @include dark-mode {
         color: #555;
@@ -117,14 +122,14 @@
   }
 
   li {
-    margin-bottom: .47rem;
+    margin-bottom: .5rem;
 
     &:last-child {
       margin-bottom: 0rem;
     }
 
     li {
-      margin-top: .47rem;
+      margin-top: .5rem;
     }
   }
 
@@ -170,7 +175,7 @@
 .Content {
   > p:first-of-type {
     @include text-lg;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
