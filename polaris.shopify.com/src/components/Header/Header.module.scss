@@ -15,7 +15,7 @@
     ul {
       display: flex;
       align-items: center;
-      font-size: var(--font-size-100);
+      font-size: var(--font-size-300);
       font-weight: var(--font-weight-500);
 
       li {
@@ -73,8 +73,8 @@
   align-items: center;
   color: var(--text-inherit);
   gap: 0.7rem;
-  font-weight: var(--font-weight-500);
-  font-size: var(--font-size-100);
+  font-weight: var(--font-weight-600);
+  font-size: var(--font-size-300);
 
   p {
     margin: 0;
@@ -95,7 +95,7 @@
   border-radius: var(--border-radius-200);
   color: var(--text-strong);
   font-weight: var(--font-weight-500);
-  font-size: var(--font-size-100);
+  font-size: var(--font-size-300);
   margin-top: 0.4rem;
   margin-left: 0.5rem;
   padding: 1rem;
