@@ -9,18 +9,18 @@
 
   ul ul {
     position: relative;
-    // padding-left: 0.75rem;
+    padding-left: 0.75rem;
 
-    // &::before {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   top: 0.4rem;
-    //   bottom: 0.4rem;
-    //   width: 1px;
-    //   left: 0;
-    //   background: var(--border-color);
-    // }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0.4rem;
+      bottom: 0.4rem;
+      width: 1px;
+      left: 0;
+      background: var(--border-color);
+    }
   }
 
   > ul > li {
@@ -30,12 +30,14 @@
     }
   }
 
+  li {
+    margin-top: .25rem;
+  }
+
   span {
     display: inline-block;
-    font-size: var(--font-size-300);
-    font-weight: var(--font-weight-500);
-    color: var(--text-strong);
-    margin-bottom: 0.25rem;
+    @include kicker;
+    margin-bottom: 0.75rem;
   }
 
   a {
@@ -43,7 +45,7 @@
     padding: 1px 0;
     position: relative;
     color: inherit;
-    font-size: var(--font-size-100);
+    @include nav;
 
     &:hover {
       color: var(--text-strong);
