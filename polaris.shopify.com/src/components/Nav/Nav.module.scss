@@ -24,7 +24,7 @@
   }
 
   > ul > li {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     &:last-child {
       border-bottom: none;
     }
@@ -37,7 +37,7 @@
   span {
     display: inline-block;
     @include kicker;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
   }
 
   a {
