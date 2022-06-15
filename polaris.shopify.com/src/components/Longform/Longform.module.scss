@@ -25,10 +25,10 @@
 
   h1 {
     @include heading-1;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
 
     @media screen and (max-width: $breakpointMobile) {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
     }
   }
 
@@ -92,7 +92,7 @@
   ul li {
     position: relative;
     &::marker {
-      color: #999;
+      color: #444;
 
       @include dark-mode {
         color: #555;
@@ -111,25 +111,25 @@
         position: absolute;
         left: 0;
         border-radius: var(--border-radius-round);
-        opacity: 0.75;
+        opacity: 1;
       }
     }
   }
 
   li {
-    margin-bottom: 0.5em;
+    margin-bottom: .47rem;
 
     &:last-child {
-      margin-bottom: 0;
+      margin-bottom: 0rem;
     }
 
     li {
-      margin-top: 0.5rem;
+      margin-top: .47rem;
     }
   }
 
   strong {
-    font-weight: var(--font-weight-500);
+    font-weight: var(--font-weight-700);
     color: var(--text-strong);
   }
 
@@ -169,10 +169,8 @@
 
 .Content {
   > p:first-of-type {
-    margin-top: 0;
+    @include text-lg;
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    color: var(--text-strong);
-    font-size: var(--font-size-800);
-    letter-spacing: var(--letter-spacing-300);
   }
 }
