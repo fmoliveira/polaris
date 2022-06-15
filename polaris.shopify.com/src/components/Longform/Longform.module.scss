@@ -37,13 +37,13 @@
 
   h2 {
     @include heading-2;
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
   }
 
   h3 {
     @include heading-3;
-    margin-top:3rem;
+    margin-top: 2rem;
     margin-bottom: .75rem;
   }
 
@@ -51,14 +51,14 @@
     @include heading-4;
   }
 
-  // h3,
-  // h4 {
-  //   + p,
-  //   + ul,
-  //   + ol {
-  //     margin-top: -0.5rem;
-  //   }
-  // }
+  h3,
+  h4 {
+    + p,
+    + ul,
+    + ol {
+      margin-top: -0.25rem;
+    }
+  }
 
   h1,
   h2,
