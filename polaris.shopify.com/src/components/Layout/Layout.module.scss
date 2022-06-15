@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/fonts.scss";
 
 .Layout {
   --gap: 1rem;
@@ -68,7 +69,7 @@
   width: var(--toc-width);
   right: calc((var(--toc-width) + 6rem) * -1);
   height: 100%;
-  font-size: var(--font-size-50);
+  @include nav;
 
   @media screen and (max-width: $breakpointDesktop) {
     display: none;
@@ -95,7 +96,7 @@
     ul ul {
       position: relative;
       margin-top: 0.25rem;
-      font-size: var(--font-size-50);
+      @include nav;
       padding-left: 0.75rem;
 
       &::before {
