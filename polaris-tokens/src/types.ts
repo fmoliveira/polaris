@@ -37,32 +37,3 @@ export type Exact<
     } & {
       [Key in Exclude<keyof InputType, KeysOfUnion<ParameterType>>]: never;
     };
-
-export interface TokenProperties {
-  description?: string;
-  value: string;
-}
-
-export interface TokenGroup {
-  [token: string]: string;
-}
-
-export interface MetaTokenGroup {
-  [token: string]: TokenProperties;
-}
-
-export interface MetaTokens {
-  breakpoints: MetaTokenGroup;
-  colors: MetaTokenGroup;
-  depth: MetaTokenGroup;
-  legacy: MetaTokenGroup;
-  motion: MetaTokenGroup;
-  shape: MetaTokenGroup;
-  spacing: MetaTokenGroup;
-  typography: MetaTokenGroup;
-  zIndex: MetaTokenGroup;
-}
-
-export type Tokens = {
-  [Property in keyof MetaTokens]: TokenGroup;
-};
