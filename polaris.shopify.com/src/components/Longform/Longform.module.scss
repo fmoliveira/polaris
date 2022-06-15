@@ -3,7 +3,7 @@
 @import "../../styles/variables.scss";
 
 .Longform {
-  font-size: 1.125rem;
+  @include text;
   line-height: 1.75rem;
 
   img {
