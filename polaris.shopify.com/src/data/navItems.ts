@@ -12,7 +12,6 @@ interface NavItemWithIcon extends NavItem {
 export const foundationsNavItems: NavItemWithIcon[] = [
   {
     title: "Foundations",
-    url: "/foundations",
     children: [
       {
         title: "Experience values",
