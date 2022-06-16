@@ -46,7 +46,9 @@ function Layout({
           )}
           <div className={styles.Post}>
             {showTOC && <TOC items={tocItems} />}
-            <div className={styles.PostContent}>{children}</div>
+            <div id="main" className={styles.PostContent}>
+              {children}
+            </div>
           </div>
         </div>
       </article>
