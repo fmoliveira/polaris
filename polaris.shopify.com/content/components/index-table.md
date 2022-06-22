@@ -72,6 +72,11 @@ examples:
     description: >-
       An index table with a sticky last column that stays visible on scroll. The
       last heading will also be sticky if not hidden.
+  - fileName: index-table-with-click-through-link.tsx
+    title: Index table with click-through link
+    description: >-
+      An index table with a primary link element that can be clicked. This disables
+      the default behavior of clicking the row to trigger row selection.
   - fileName: index-table-without-checkboxes.tsx
     title: Index table without checkboxes
     description: An index table without checkboxes and bulk actions.
